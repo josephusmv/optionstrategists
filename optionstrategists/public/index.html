@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="fluid-container">
+    <div class="row">
+        <div class="row">
+            <div class="col-sm-1">
+                <p class="enter_input">IV Low:</p>
+            </div>
+            <div class="col-sm-1">
+                <input id='numIVLow' class="enter_input" type="number" name="ImpliedVolatility" value="0.2">
+            </div>
+            <div class="col-sm-1">
+                <p class="enter_input">IV High:</p>
+            </div>
+            <div class="col-sm-1">
+                <input id='numIVHigh' class="enter_input" type="number" name="ImpliedVolatility" value="0.3">
+            </div>
+            <div class="col-sm-1">
+                <p class="enter_input">UPrice:</p>
+            </div>
+            <div class="col-sm-1">
+                <input id='numCurPrice' class="enter_input" type="number" name="Left natrual days" value="45">
+            </div>
+            <div class="col-sm-1">
+                <p class="enter_input">HoldDays:</p>
+            </div>
+            <div class="col-sm-1">
+                <input id='numHDays' class="enter_input" type="number" name="Hold Days for the combination" value="15">
+            </div>
+            <div class="col-sm-1">
+                <p class="enter_input">RFIR:</p>
+            </div>
+            <div class="col-sm-1">
+                <input id='numRFIR' class="enter_input" type="number" name="Risk Free Interest Rate" value="0.03">
+            </div>
+            <div class="col-sm-2 pull-right">
+                <button id="btnCalcEarns" type="button" class="btn btn-primary btn-block" onclick="calculateEarns()">
+                    Calculate
+                </button>
+            </div>
+        </div>
+
+        <table class="table" id="tblLegsInputs">
+            <tr>
+                <th class="enter_input">Strike Price</th>
+                <th class="enter_input">Option Type</th>
+                <th class="enter_input">Long/Short</th>
+                <th class="enter_input">cost</th>
+                <th class="enter_input">Lots</th>
+                <th class="enter_input">Days</th>
+                <th class="enter_input"></th>
+            </tr>
+            <legInputsRow></legInputsRow>
+        </table>
+    </div>
+    <div class="row">
+        <div class="tab-pane fade panel panel-default in active" id="tabEarnChart">
+            <div class="panel-body" style="min-height: 600px;" id="idEarnChartsContent">
+                - - -
+            </div>
+        </div>
+    </div>
+</div>
+<script crossorigin="anonymous"
+        integrity="sha512-41TNls7qBS/8rKqfgMho0blSRty2TgHbdHq1h8x248EseHj1ZfFPAbjWVBQssJtkXptUwaBLVC3F1W8he53bgw=="
+        src="https://lib.baomitu.com/echarts/5.3.1/echarts.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="javascripts/earns.js"></script>
+<script src="javascripts/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.enter_input {
+    width: 105px;
+    height: 32px;
+    margin: 5px;
+    font-size: 120%;
+}
