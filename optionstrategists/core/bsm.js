@@ -1,5 +1,4 @@
 const math = require('mathjs');
-//因为已经用了Ln(S0/K)，所以这里直接用普通正态分布就可以了，而不需要使用对数正正态分布
 const normal = require('jstat').normal;
 
 
